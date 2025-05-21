@@ -27,20 +27,20 @@
     <div class="recipes-list">
         <h1>Wszystkie Przepisy</h1>
         @foreach ($recipes as $key => $recipe)
-            <div class="recipe-item" onclick="window.location.href='{{ route('instruction.show', ['slug' => $key]) }}'" style="cursor: pointer;">
+            <div class="recipe-item" onclick="window.location.href='{{ route('instruction.show', ['slug' => $recipe->id]) }}'" style="cursor: pointer;">
                 <img src="{{ $recipe['main_img'] }}" alt="{{ $recipe['name'] }}" />
                 <div class="recipe-content">
                     <h2>{{ $recipe['name'] }}</h2>
                     <p>{{ $recipe['desc'] }}</p>
                     <div class="recipe-meta">
-                        <span>⏱️ {{ $recipe['time'] }}</span>
-                        <span>⭐ {{ $recipe['score'] }}/5</span>
+                        <span>⏱️ {{ $recipe->time }}</span>
+                        <span>⭐ {{ $recipe->score }}/5</span>
                         <button
                             class="heart-button"
                             type="button"
-                            data-slug="{{ $key }}"
+                            data-slug="{{ $recipe->id }}"
                             onclick="toggleFavorite(event, this)">
-                            {{ in_array($key, $favorites) ? '💔' : '❤️' }}
+                            {{ in_array($recipe->id, $favorites) ? '❤️' : '💔' }}
                         </button>
                     </div>
                 </div>
@@ -87,7 +87,7 @@
                 return response.json();
             })
             .then(data => {
-                button.textContent = data.favorited ? '💔' : '❤️';
+                button.textContent = data.favorited ? '❤️' : '💔';
             })
             .catch(error => {
                 console.error('Błąd dodawania do ulubionych:', error);

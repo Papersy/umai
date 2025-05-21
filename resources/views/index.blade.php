@@ -37,7 +37,7 @@
         <h2>Najnowsze Przepisy</h2>
         <div class="recipe-grid">
             @foreach ($recipes as $key => $recipe)
-                <div class="recipe-card"  onclick="window.location.href='{{ route('instruction.show', ['slug' => $key]) }}'" style="cursor: pointer;">
+                <div class="recipe-card"  onclick="window.location.href='{{ route('instruction.show', ['slug' => $recipe->id]) }}'" style="cursor: pointer;">
                     <img src={{ $recipe['main_img'] }} alt={{ $recipe['name'] }} />
                     <h3>{{ $recipe['name'] }}</h3>
                     <p>{{ $recipe['desc'] }}</p>
