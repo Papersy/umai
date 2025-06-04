@@ -13,6 +13,7 @@
             <a href="{{ route('index') }}">Strona Główna</a>
             <a href="{{ route('recipe') }}">Przepisy</a>
             <a href="{{route('favorites')}}">Ulubione</a>
+            <a href="{{route('bibliografia')}}"">Bibliografia</a>
         </div>
         <div class="search-bar">
             <input type="text" placeholder="Search..." />
@@ -30,8 +31,13 @@
             </div>
         </div>
 
-        <div class="recipe-image">
-            <img src="{{ $recipe['main_img'] }}" alt="Anmitsu" />
+        <div class="slider-container">
+            <button class="slider-arrow prev">❮</button>
+            <div class="slider">
+                <img src="{{ $recipe['main_img'] }}" alt="Pancakes with berries" class="slide active">
+                <img src="{{ $recipe['main_img'] }}" alt="Colorful macarons" class="slide">
+            </div>
+            <button class="slider-arrow next">❯</button>
         </div>
 
         <div class="recipe-description">
@@ -96,5 +102,28 @@
             </div>
         </div>
     </footer>
+
+<script>
+        const slides = document.querySelectorAll('.slide');
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentSlide = currentSlide === 0 ? slides.length - 1 : currentSlide - 1;
+            showSlide(currentSlide);
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentSlide = currentSlide === slides.length - 1 ? 0 : currentSlide + 1;
+            showSlide(currentSlide);
+        });
+    </script>
+
 </body>
 </html>

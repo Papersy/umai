@@ -2,7 +2,7 @@
     --primary-color: #ff9eaf;
     --secondary-color: #ffd6de;
     --text-color: #333;
-    --background-color: #fff5f7;
+    --background-color: #f38493bd;
     --card-background: #ffffff;
     --shadow-color: rgba(0, 0, 0, 0.1);
 }
@@ -15,11 +15,9 @@
 }
 
 body {
-    background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
-
-    background-image: url('/bg.png'); /* путь от public/ */
+    background: url('/bg3.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; /* или contain, если хочешь видеть всю картинку */
@@ -29,8 +27,8 @@ body {
 
 /* Navbar Styles */
 .navbar {
-    background-color: var(--card-background);
-    padding: 1rem 2rem;
+    background-color: #fff0f2c2;
+    padding: 4px 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,9 +39,12 @@ body {
 }
 
 .nav-brand {
-    font-size: 1.5rem;
+    font-size: 55px;
     font-weight: bold;
     color: var(--primary-color);
+    font-family: Abril Fatface;
+    color: var(--text-color);
+    letter-spacing: -3px;
 }
 
 .nav-links a {
@@ -53,11 +54,16 @@ body {
     padding: 0.5rem;
     border-radius: 4px;
     transition: background-color 0.3s;
+    font-size: 1.7rem;
+    font-family: Abhaya Libre;
 }
 
-.nav-links a:hover,
+.nav-links a:hover{
+    background-color: var(--primary-color);
+}
+
 .nav-links a.active {
-    background-color: var(--secondary-color);
+    background-color: #ff9eb09d;
 }
 
 .search-bar {
@@ -67,9 +73,10 @@ body {
 
 .search-bar input {
     padding: 0.5rem;
-    border: 1px solid var(--secondary-color);
+    border: 1px solid #b400279c;
     border-radius: 4px;
     outline: none;
+    background-color: #fff0f2;
 }
 
 .search-button {
@@ -81,13 +88,46 @@ body {
 
 /* Welcome Banner Styles */
 .welcome-banner {
-    background-color: var(--secondary-color);
-    padding: 2rem;
-    margin: 2rem auto;
-    max-width: 800px;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px var(--shadow-color);
+  background-color: #fff0f2;
+  padding: 5rem;
+  margin: 2rem auto;
+  margin-top: 10rem;
+  margin-bottom: 0;
+  max-width: 600px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 0;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  box-sizing: content-box;
 }
+
+.welcome-banner::before,
+.welcome-banner::after {
+  content: '';
+  position: absolute;
+  background-color: #fff0f2;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.welcome-banner::before {
+  width: 120px;
+  height: 270px;
+  top: -100px;
+  left: 200px;
+  top: -180px;
+  transform: rotate(-45deg);
+}
+
+.welcome-banner::after {
+  width: 120px;
+  height: 270px;
+  top: -100px;
+  right: 200px;
+  top: -180px;
+  transform: rotate(45deg);
+}
+
 
 .mascot-message {
     text-align: center;
@@ -95,20 +135,27 @@ body {
 }
 
 .mascot-message p {
+    margin-top: -15px;
     margin-bottom: 1rem;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
+    font-family: Abhaya Libre;
 }
 
 .mascot-message p:first-child {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    margin-top: -2rem;
+    margin-bottom: 2rem;
     font-weight: bold;
-    color: var(--primary-color);
+    color: #e26b81;
+    font-family: Abril Fatface;
 }
 
 .cta-button {
     background-color: var(--primary-color);
     color: white;
     border: none;
+    margin-top: 1.5rem;
+    margin-bottom: -1.5rem;
     padding: 0.8rem 1.5rem;
     border-radius: 25px;
     font-size: 1.1rem;
@@ -123,26 +170,39 @@ body {
 /* Recipe Section Styles */
 .recipes-section {
     padding: 2rem;
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
 .recipes-section h2 {
+    font-weight: 100;
+    text-transform: uppercase;
+    background-color: #fff0f2c2;
     text-align: center;
-    color: var(--primary-color);
+    color: var(--text-color);
     margin-bottom: 2rem;
     font-size: 2rem;
+    font-family: Abril Fatface;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    border-radius: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .recipe-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 4rem;
+}
+
+.recipe-grid {
+    font-family: Abril Fatface;
 }
 
 .recipe-card {
-    background-color: var(--card-background);
-    border-radius: 8px;
+    background-color: #fff0f2;
+    border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 2px 4px var(--shadow-color);
     transition: transform 0.3s;
@@ -154,18 +214,24 @@ body {
 
 .recipe-card img {
     width: 100%;
-    height: 200px;
+    height: 300px;
     object-fit: cover;
+    filter: brightness(75%); /* затемнення */
+}
+.recipe-card:hover img {
+    filter: brightness(100%); /* затемнення */
 }
 
 .recipe-card h3 {
     padding: 1rem;
-    color: var(--primary-color);
+    color: #e26b81;
+    font-size: 1.8rem;
 }
 
 .recipe-card p {
     padding: 0 1rem 1rem;
     color: var(--text-color);
+    font-size: 1.3rem;
 }
 
 /* Recipes List Page Styles */
@@ -176,14 +242,16 @@ body {
 }
 
 .recipes-list h1 {
-    color: var(--primary-color);
+    color: #5f0909;
     text-align: center;
     margin-bottom: 2rem;
-    font-size: 2.5rem;
+    font-size: 3rem;
+    font-family: Abril Fatface;
+
 }
 
 .recipe-item {
-    background-color: var(--card-background);
+    background-color: #fff0f2;
     border-radius: 12px;
     overflow: hidden;
     margin-bottom: 2rem;
@@ -200,6 +268,11 @@ body {
     width: 300px;
     height: 200px;
     object-fit: cover;
+    filter: brightness(75%); /* затемнення */
+}
+
+.recipe-item:hover img {
+    filter: brightness(100%); /* затемнення */
 }
 
 .recipe-content {
@@ -208,7 +281,7 @@ body {
 }
 
 .recipe-content h2 {
-    color: var(--primary-color);
+    color: #e26b81;
     margin-bottom: 1rem;
 }
 
@@ -245,9 +318,10 @@ body {
 }
 
 .recipe-header h1 {
-    color: var(--primary-color);
-    font-size: 2.5rem;
+    color: var(--text-color);
+    font-size: 3rem;
     margin-bottom: 1rem;
+    font-family: Abhaya Libre;
 }
 
 .recipe-meta-info {
@@ -255,6 +329,7 @@ body {
     justify-content: center;
     gap: 2rem;
     color: #666;
+    font-size: 1.3rem;
 }
 
 .recipe-image {
@@ -271,11 +346,12 @@ body {
 }
 
 .recipe-description {
-    background-color: var(--card-background);
+    background-color: #fff0f2;
     padding: 1.5rem;
     border-radius: 12px;
     margin-bottom: 2rem;
     box-shadow: 0 2px 4px var(--shadow-color);
+    font-size: 1.2rem;
 }
 
 .recipe-content-wrapper {
@@ -286,14 +362,15 @@ body {
 }
 
 .ingredients, .instructions {
-    background-color: var(--card-background);
+    background-color: #fff0f2;
     padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 2px 4px var(--shadow-color);
+    font-size: 1.2rem;
 }
 
 .ingredients h2, .instructions h2 {
-    color: var(--primary-color);
+    color: #e26b81;
     margin-bottom: 1rem;
 }
 
@@ -339,19 +416,20 @@ body {
 }
 
 .instructions h3 {
-    color: var(--primary-color);
+    color: #e26b81;;
     margin-bottom: 0.5rem;
 }
 
 .recipe-tips {
-    background-color: var(--card-background);
+    background-color: #fff0f2;
     padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 2px 4px var(--shadow-color);
+    font-size: 1.2rem;
 }
 
 .recipe-tips h2 {
-    color: var(--primary-color);
+    color: #e26b81;;
     margin-bottom: 1rem;
 }
 
@@ -420,8 +498,8 @@ body {
 
 /* Footer Styles */
 .footer {
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 4rem 0rem;
     margin-top: auto;
     box-shadow: 0 -2px 4px var(--shadow-color);
     backdrop-filter: blur(5px);
@@ -442,15 +520,14 @@ body {
 }
 
 .footer-brand {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
+    font-family: Abril Fatface;
+    color: #ffffff
 }
 
 .footer-text {
-    color: var(--text-color);
-    line-height: 1.6;
+    color: #ffffff;
 }
 
 .social-links {
@@ -468,6 +545,30 @@ body {
 
 .social-links a:hover {
     color: var(--secondary-color);
+}
+
+/* Bibliografia Page Styles */
+.bibliografia-content {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 2rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    backdrop-filter: blur(5px);
+}
+
+.bibliografia-content h1 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.bibliografia-content p {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: var(--text-color);
 }
 
 @media (max-width: 768px) {
@@ -533,4 +634,59 @@ html, body {
     flex: 1; /* Заставляет контент растягиваться, чтобы футер уходил вниз */
 }
 
+/*slider*/
+.slider-container {
+    position: relative;
+    width: 100%;
+    margin: 2rem 0;
+    overflow: hidden;
+}
 
+.slider {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 2;
+    transition: background-color 0.3s;
+}
+
+.slider-arrow:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}

@@ -14,6 +14,7 @@
             <a href="{{route('index')}}" class="active">Strona Główna</a>
             <a href="{{route('recipe')}}">Przepisy</a>
             <a href="{{route('favorites')}}">Ulubione</a>
+            <a href="{{route('bibliografia')}}"">Bibliografia</a>
         </div>
         <div class="search-bar">
             <form action="{{ route('recipe') }}" method="GET" style="display: flex;">
