@@ -35,7 +35,7 @@
             <button class="slider-arrow prev">❮</button>
             <div class="slider">
                 <img src="{{ $recipe['main_img'] }}" alt="Pancakes with berries" class="slide active">
-                <img src="{{ $recipe['main_img'] }}" alt="Colorful macarons" class="slide">
+                <img src="{{ $recipe['second_img'] }}" alt="Colorful macarons" class="slide">
             </div>
             <button class="slider-arrow next">❯</button>
         </div>
