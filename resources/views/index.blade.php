@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ prepStyle('/style.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Umai - Anime Recipe Collection</title>
 </head>
@@ -55,10 +55,10 @@
                 <p>Jesteśmy gotowi odpowiedzieć na wszelkie pytania i zapewnić Państwu niezbędną pomoc.</p>
             </div>
             <div class="social-links">
-                <a href="#" title="Facebook">📘</a>
-                <a href="#" title="Email">📧</a>
-                <a href="#" title="Instagram">📸</a>
-                <a href="#" title="Telegram">📬</a>
+		<a href="https://www.facebook.com/profile.php?id=100056639597769" title="Facebook">📘</a>
+                <a href="mailto:katagolubova46@gmail.com" title="Email">📧</a>
+                <a href="https://www.instagram.com/_myniceeng__" title="Instagram">📸</a>
+                <a href="https://t.me/kittykott" title="Telegram">📬</a>
             </div>
         </div>
     </footer>

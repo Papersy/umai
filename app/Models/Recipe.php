@@ -18,10 +18,13 @@ class Recipe extends Model
         'desc',
         'ingredients',
         'instruction',
+        'tips',
+        'second_img',
     ];
 
     protected $casts = [
         'ingredients' => 'array',
-        'instruction' => 'array'
+        'instruction' => 'array',
+        'tips' => 'array',
     ];
 }

@@ -22,10 +22,11 @@ class RecipeSeeder extends Seeder
                 'portions' => $recipe['portions'],
                 'score' => $recipe['score'],
                 'main_img'=> $recipe['main_img'],
-                'second_img'=> $recipe['second_img'],
+                //'second_img'=> $recipe['second_img'],
                 'desc'=> $recipe['desc'],
                 'ingredients'=> $recipe['ingredients'],
                 'instruction'=> $recipe['instruction'],
+                'tips'=> $recipe['tips'],
             ]);
         }
     }

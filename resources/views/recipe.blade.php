@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="{{ prepStyle('/style.css') }}">
     <title>Przepisy - Umai Anime Recipe Collection</title>
 </head>
 <body>
@@ -58,10 +58,10 @@
                 <p>Jesteśmy gotowi odpowiedzieć na wszelkie pytania i zapewnić Państwu niezbędną pomoc.</p>
             </div>
             <div class="social-links">
-                <a href="#" title="Facebook">📘</a>
-                <a href="#" title="Email">📧</a>
-                <a href="#" title="Instagram">📸</a>
-                <a href="#" title="Telegram">📬</a>
+		<a href="https://www.facebook.com/profile.php?id=100056639597769" title="Facebook">📘</a>
+                <a href="mailto:katagolubova46@gmail.com" title="Email">📧</a>
+                <a href="https://www.instagram.com/_myniceeng__" title="Instagram">📸</a>
+                <a href="https://t.me/kittykott" title="Telegram">📬</a>
             </div>
         </div>
     </footer>
@@ -70,10 +70,13 @@
 <script>
     function toggleFavorite(event, button) {
         event.stopPropagation();
+        event.preventDefault();
+
         const slug = button.dataset.slug;
         const token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+        const url = `https://wierzba.wzks.uj.edu.pl/~21_golubova/umai/public`;
 
-        fetch(`/toggle-favorite/${slug}`, {
+        fetch(`${url}/toggle-favorite/${slug}`, {
             method: 'POST',
             headers: {
                 'X-CSRF-TOKEN': token,
@@ -81,21 +84,20 @@
                 'Accept': 'application/json',
             },
         })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Błąd sieci');
-                }
-                return response.json();
-            })
-            .then(data => {
-                button.textContent = data.favorited ? '❤️' : '💔';
-            })
-            .catch(error => {
-                console.error('Błąd dodawania do ulubionych:', error);
-            });
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Błąd sieci');
+            }
+            return response.json();
+        })
+        .then(data => {
+            button.textContent = data.favorited ? '❤️' : '💔';
+        })
+        .catch(error => {
+            console.error('Błąd dodawania do ulubionych:', error);
+        });
     }
 </script>
-
 
 </html>
 

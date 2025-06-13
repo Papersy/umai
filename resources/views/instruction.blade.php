@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="{{ prepStyle('/style.css') }}">
     <title>Anmitsu Recipe - Umai Anime Recipe Collection</title>
 </head>
 <body>
@@ -16,8 +16,10 @@
             <a href="{{route('bibliografia')}}"">Bibliografia</a>
         </div>
         <div class="search-bar">
-            <input type="text" placeholder="Search..." />
-            <button class="search-button">🔍</button>
+            <form action="{{ route('recipe') }}" method="GET" style="display: flex;">
+                <input type="text" name="search" placeholder="Search..." />
+                <button type="submit" class="search-button">🔍</button>
+            </form>
         </div>
     </nav>
 
@@ -70,9 +72,9 @@
         <div class="recipe-tips">
             <h2>Wskazówki</h2>
             <ul>
-                <li>Galaretkę najlepiej przygotować dzień wcześniej</li>
-                <li>Można zastąpić owoce sezonowymi zamiennikami</li>
-                <li>Syrop mitsu można zastąpić miodem</li>
+                @foreach ($recipe->tips as $tip)
+                    <li>{{$tip}}</li>
+                @endforeach
             </ul>
         </div>
     </div>
@@ -87,18 +89,10 @@
                 </div>
             </div>
             <div class="social-links">
-                <a href="#" title="Facebook" >
-                    <img src="/facebook.png" style="width:30px;height:30px;" />
-                </a>
-                <a href="#" title="Email">
-                    <img src="/mail.png" style="width:32px;height:32px;" />
-                </a>
-                <a href="#" title="Instagram">
-                    <img src="/instagram.png" style="width:26px;height:26px;" />
-                </a>
-                <a href="#" title="Telegram">
-                    <img src="/telegram.png" style="width:25px;height:25px;" />
-                </a>
+		<a href="https://www.facebook.com/profile.php?id=100056639597769" title="Facebook">📘</a>
+                <a href="mailto:katagolubova46@gmail.com" title="Email">📧</a>
+                <a href="https://www.instagram.com/_myniceeng__" title="Instagram">📸</a>
+                <a href="https://t.me/kittykott" title="Telegram">📬</a>
             </div>
         </div>
     </footer>
