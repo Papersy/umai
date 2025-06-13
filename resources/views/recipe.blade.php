@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="{{ prepStyle('/style.css') }}">
     <title>Przepisy - Umai Anime Recipe Collection</title>
 </head>
 <body>
@@ -15,6 +15,7 @@
             <a href="{{route('index')}}">Strona Główna</a>
             <a href="{{route('recipe')}}" class="active">Przepisy</a>
             <a href="{{route('favorites')}}">Ulubione</a>
+            <a href="{{route('bibliografia')}}"">Bibliografia</a>
         </div>
         <div class="search-bar">
             <form action="{{ route('recipe') }}" method="GET" style="display: flex;">
@@ -27,20 +28,20 @@
     <div class="recipes-list">
         <h1>Wszystkie Przepisy</h1>
         @foreach ($recipes as $key => $recipe)
-            <div class="recipe-item" onclick="window.location.href='{{ route('instruction.show', ['slug' => $key]) }}'" style="cursor: pointer;">
+            <div class="recipe-item" onclick="window.location.href='{{ route('instruction.show', ['slug' => $recipe->id]) }}'" style="cursor: pointer;">
                 <img src="{{ $recipe['main_img'] }}" alt="{{ $recipe['name'] }}" />
                 <div class="recipe-content">
                     <h2>{{ $recipe['name'] }}</h2>
                     <p>{{ $recipe['desc'] }}</p>
                     <div class="recipe-meta">
-                        <span>⏱️ {{ $recipe['time'] }}</span>
-                        <span>⭐ {{ $recipe['score'] }}/5</span>
+                        <span>⏱️ {{ $recipe->time }}</span>
+                        <span>⭐ {{ $recipe->score }}/5</span>
                         <button
                             class="heart-button"
                             type="button"
-                            data-slug="{{ $key }}"
+                            data-slug="{{ $recipe->id }}"
                             onclick="toggleFavorite(event, this)">
-                            {{ in_array($key, $favorites) ? '💔' : '❤️' }}
+                            {{ in_array($recipe->id, $favorites) ? '❤️' : '💔' }}
                         </button>
                     </div>
                 </div>
@@ -57,10 +58,10 @@
                 <p>Jesteśmy gotowi odpowiedzieć na wszelkie pytania i zapewnić Państwu niezbędną pomoc.</p>
             </div>
             <div class="social-links">
-                <a href="#" title="Facebook">📘</a>
-                <a href="#" title="Email">📧</a>
-                <a href="#" title="Instagram">📸</a>
-                <a href="#" title="Telegram">📬</a>
+		<a href="https://www.facebook.com/profile.php?id=100056639597769" title="Facebook">📘</a>
+                <a href="mailto:katagolubova46@gmail.com" title="Email">📧</a>
+                <a href="https://www.instagram.com/_myniceeng__" title="Instagram">📸</a>
+                <a href="https://t.me/kittykott" title="Telegram">📬</a>
             </div>
         </div>
     </footer>
@@ -69,10 +70,13 @@
 <script>
     function toggleFavorite(event, button) {
         event.stopPropagation();
+        event.preventDefault();
+
         const slug = button.dataset.slug;
         const token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+        const url = `https://wierzba.wzks.uj.edu.pl/~21_golubova/umai/public`;
 
-        fetch(`/toggle-favorite/${slug}`, {
+        fetch(`${url}/toggle-favorite/${slug}`, {
             method: 'POST',
             headers: {
                 'X-CSRF-TOKEN': token,
@@ -80,21 +84,20 @@
                 'Accept': 'application/json',
             },
         })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Błąd sieci');
-                }
-                return response.json();
-            })
-            .then(data => {
-                button.textContent = data.favorited ? '💔' : '❤️';
-            })
-            .catch(error => {
-                console.error('Błąd dodawania do ulubionych:', error);
-            });
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Błąd sieci');
+            }
+            return response.json();
+        })
+        .then(data => {
+            button.textContent = data.favorited ? '❤️' : '💔';
+        })
+        .catch(error => {
+            console.error('Błąd dodawania do ulubionych:', error);
+        });
     }
 </script>
-
 
 </html>
 

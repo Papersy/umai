@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BibliografiaController;
 use App\Http\Controllers\InstructionController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\RecipeController;
@@ -11,6 +12,8 @@ Route::get('/instruction/{slug}', [InstructionController::class, 'show'])->name(
 Route::get('/', [IndexController::class, 'index'])->name('index');
 
 Route::get('/recipe', [RecipeController::class, 'show'])->name('recipe');
+
+Route::get('/bibliografia', [BibliografiaController::class, 'show'])->name('bibliografia');
 
 Route::post('/toggle-favorite/{slug}', [FavoriteController::class, 'toggle'])->name('favorite.toggle');
 

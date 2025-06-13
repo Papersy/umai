@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Recipe;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
@@ -16,10 +17,11 @@ class FavoriteController extends Controller
         }
 
         if (in_array($slug, $favorites)) {
-            $favorites = array_values(array_diff($favorites, [$slug]));
+            $favorites = array_values(array_filter($favorites, fn($item) => $item !== $slug));
             $favorited = false;
+            
         } else {
-            $favorites[] = $slug;
+            $favorites = array_merge($favorites, [$slug]);
             $favorited = true;
         }
 

@@ -29,6 +29,11 @@ return [
                 "desc" => "Owiń uformowane onigiri paskiem nori. Możesz też podać bez nori. Gotowe!"
             ]
         ],
+        "tips" => [
+            "Używaj ryżu do sushi, aby onigiri miało odpowiednią konsystencję.",
+            "Możesz dodać sezam lub czarny sezam do ryżu dla dodatkowego smaku.",
+            "Onigiri najlepiej smakuje świeże, ale można je przechowywać w lodówce do 1 dnia."
+        ],
     ],
     "ramen" => [
         "name" => "Ramen",
@@ -57,6 +62,11 @@ return [
                 "title" => "Złożenie dania",
                 "desc" => "Ułóż makaron w misce, zalej bulionem i dodaj dodatki."
             ],
+        ],
+        "tips" => [
+            "Możesz użyć gotowego bulionu lub przygotować własny z kości drobiowych.",
+            "Dodatki można modyfikować według własnych upodobań.",
+            "Ramen najlepiej smakuje świeżo przygotowany."
         ],
     ],
     "katsudon" => [
@@ -100,6 +110,11 @@ return [
                 "desc" => "Nałóż porcję gorącego ryżu do miski i wyłóż na niego zawartość patelni. Posyp zieloną cebulką i podawaj od razu."
             ]
         ],
+        "tips" => [
+            "Użyj świeżego schabu, aby kotlet był soczysty.",
+            "Dashi można przygotować samodzielnie lub kupić gotowy w sklepie.",
+            "Katsudon najlepiej smakuje na świeżo, ale można go podgrzać w mikrofalówce."
+        ],
     ],
     "curry" => [
         "name" => "Katsu Curry",
@@ -137,6 +152,11 @@ return [
                 "desc" => "Ułóż ryż, nałóż porcję curry i połówki kotleta. Podawaj gorące."
             ]
         ],
+        "tips" => [
+            "Możesz dodać inne warzywa, jak groszek czy papryka.",
+            "Curry można przygotować wcześniej i podgrzać przed podaniem.",
+            "Podawaj z marynowanym imbirem lub sałatką z kapusty."
+        ],
     ],
     "okonomiyaki" => [
         "name" => "Okonomiyaki",
@@ -170,5 +190,11 @@ return [
                 "desc" => "Polej gotowy placek sosem okonomiyaki, majonezem, posyp płatkami bonito i nori. Smacznego!"
             ]
         ],
+        "tips" => [
+            "Możesz dodać ulubione składniki, jak krewetki, kalmary czy warzywa.",
+            "Sos okonomiyaki można kupić w sklepach azjatyckich lub przygotować samodzielnie.",
+            "Podawaj z marynowanym imbirem lub sałatką z kapusty."
+        
+        ]
     ]
-    ];
+];

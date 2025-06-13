@@ -7,6 +7,7 @@ return [
         "portions" => "4",
         "score" => "4.6",
         "main_img" => "https://upload.wikimedia.org/wikipedia/commons/4/43/%E5%B0%8F%E6%96%99%E7%90%86%E3%83%90%E3%83%AB%E3%81%95%E3%81%8F%E3%82%89_%E7%89%B9%E8%A3%BD%E3%81%8A%E3%81%AB%E3%81%8E%E3%82%8A.jpg",
+        "second_img" => "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Maharana_sai_pratham.jpg/250px-Maharana_sai_pratham.jpg",
         "desc" => "Onigiri to japońskie kulki ryżowe z nadzieniem, zawinięte w nori. Idealne na lunch lub przekąskę.",
         "ingredients" => [
             "2 szklanki ugotowanego ryżu do sushi",
@@ -36,6 +37,7 @@ return [
         "portions" => "4",
         "score" => "5.0",
         "main_img" => "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Shoyu_ramen%2C_at_Kasukabe_Station_%282014.05.05%29_1.jpg/1280px-Shoyu_ramen%2C_at_Kasukabe_Station_%282014.05.05%29_1.jpg",
+        "second_img" => "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Maharana_sai_pratham.jpg/250px-Maharana_sai_pratham.jpg",
         "desc" => "Pyszna zupa z makaronem, często spożywana przez Naruta.",
         "ingredients" => [
             "200 g makaronu ramen",
@@ -65,6 +67,7 @@ return [
         "portions" => "2",
         "score" => "4.6",
         "main_img" => "https://upload.wikimedia.org/wikipedia/commons/a/ad/Katsudon_001.jpg",
+        "second_img" => "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Maharana_sai_pratham.jpg/250px-Maharana_sai_pratham.jpg",
         "desc" => "Popularne danie z anime: Katsudon. To smażony kotlet wieprzowy z jajkiem i cebulą, podawany na ryżu.",
         "ingredients" => [
             "2 kotlety schabowe (około 150 g każdy)",
@@ -107,6 +110,7 @@ return [
         "portions" => "2",
         "score" => "4.5",
         "main_img" => "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Beef_curry_rice_003.jpg/1280px-Beef_curry_rice_003.jpg",
+        "second_img" => "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Maharana_sai_pratham.jpg/250px-Maharana_sai_pratham.jpg",
         "desc" => "Japońskie curry podawane z kotletem tonkatsu i ryżem.",
         "ingredients" => [
             "2 kotlety schabowe (ok. 150g każdy)",
@@ -144,6 +148,7 @@ return [
         "portions" => "2",
         "score" => "4.8",
         "main_img" => "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Okonomiyaki_001.jpg/1280px-Okonomiyaki_001.jpg",
+        "second_img" => "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Maharana_sai_pratham.jpg/250px-Maharana_sai_pratham.jpg",
         "desc" => "Okonomiyaki to smażony placek z kapustą i różnymi dodatkami. Nazwa oznacza dosłownie 'smaż, co lubisz'.",
         "ingredients" => [
             "1 szklanka mąki pszennej",
@@ -177,6 +182,7 @@ return [
         "portions" => "2",
         "score" => "4.7",
         "main_img" => "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Yakitori_by_MShades_in_Kujo%2C_Kyoto.jpg/1280px-Yakitori_by_MShades_in_Kujo%2C_Kyoto.jpg",
+        "second_img" => "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Maharana_sai_pratham.jpg/250px-Maharana_sai_pratham.jpg",
         "desc" => "Yakitori to klasyczne japońskie szaszłyki z kurczaka, grillowane i polane słodko-słonym sosem tare.",
         "ingredients" => [
             "300 g filetu z kurczaka (udka lub pierś)",
@@ -209,6 +215,7 @@ return [
         "portions" => "4",
         "score" => "4.4",
         "main_img" => "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Mochi_in_a_Box_2.jpg/1280px-Mochi_in_a_Box_2.jpg",
+        "second_img" => "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Maharana_sai_pratham.jpg/250px-Maharana_sai_pratham.jpg",
         "desc" => "Japońskie ciasteczka z kleistego ryżu z nadzieniem z czerwonej fasoli.",
         "ingredients" => [
             "1 szklanka mąki ryżowej (glutinous rice flour)",
@@ -238,6 +245,7 @@ return [
         "portions" => "4",
         "score" => "4.6",
         "main_img" => "https://upload.wikimedia.org/wikipedia/commons/c/cb/Takoyaki.jpg",
+        "second_img" => "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Maharana_sai_pratham.jpg/250px-Maharana_sai_pratham.jpg",
         "desc" => "Kulki z ośmiornicy smażone w specjalnej patelni, polane sosem takoyaki.",
         "ingredients" => [
             "1 szklanka mąki takoyaki (lub pszennej + dashi)",
@@ -270,6 +278,7 @@ return [
         "portions" => "4",
         "score" => "4.7",
         "main_img" => "https://upload.wikimedia.org/wikipedia/commons/8/8e/Taiyaki_003.jpg",
+        "second_img" => "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Maharana_sai_pratham.jpg/250px-Maharana_sai_pratham.jpg",
         "desc" => "Rydbki-shaped pancake z nadzieniem z czerwonej fasoli.",
         "ingredients" => [
             "1 szklanka mąki pszennej",
@@ -296,6 +305,7 @@ return [
         "portions" => "4",
         "score" => "4.5",
         "main_img" => "https://upload.wikimedia.org/wikipedia/commons/9/9c/Dorayaki_001_%283%29.jpg",
+        "second_img" => "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Maharana_sai_pratham.jpg/250px-Maharana_sai_pratham.jpg",
         "desc" => "Kanapka z dwóch placuszków z nadzieniem z czerwonej fasoli.",
         "ingredients" => [
             "1 szklanka mąki pszennej",
@@ -326,6 +336,7 @@ return [
         "portions" => "2",
         "score" => "4.7",
         "main_img" => "https://upload.wikimedia.org/wikipedia/commons/0/0d/Omurice_by_Taimeiken.jpg",
+        "second_img" => "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Maharana_sai_pratham.jpg/250px-Maharana_sai_pratham.jpg",
         "desc" => "Omurice to połączenie omletu i smażonego ryżu z warzywami, popularne w japońskiej kuchni domowej.",
         "ingredients" => [
             "2 jajka",
@@ -361,6 +372,7 @@ return [
         "portions" => "2",
         "score" => "4.6",
         "main_img" => "https://upload.wikimedia.org/wikipedia/commons/4/42/Nagata_Honjoken_Bokkake_Yakisoba.jpg",
+        "second_img" => "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Maharana_sai_pratham.jpg/250px-Maharana_sai_pratham.jpg",
         "desc" => "Smażony makaron z warzywami i mięsem, doprawiony sosem yakisoba.",
         "ingredients" => [
             "2 porcje makaronu yakisoba",
@@ -389,6 +401,7 @@ return [
         "portions" => "2",
         "score" => "4.7",
         "main_img" => "https://upload.wikimedia.org/wikipedia/commons/2/2e/Tempura_01.jpg",
+        "second_img" => "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Maharana_sai_pratham.jpg/250px-Maharana_sai_pratham.jpg",
         "desc" => "Lekko chrupiące krewetki i warzywa w cieście tempura.",
         "ingredients" => [
             "6 krewetek",
@@ -421,6 +434,7 @@ return [
         "portions" => "2",
         "score" => "4.4",
         "main_img" => "https://upload.wikimedia.org/wikipedia/commons/e/e8/Miso_Soup_001.jpg",
+        "second_img" => "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Maharana_sai_pratham.jpg/250px-Maharana_sai_pratham.jpg",
         "desc" => "Tradycyjna japońska zupa miso z tofu i glonami.",
         "ingredients" => [
             "500 ml dashi",
@@ -450,6 +464,7 @@ return [
         "portions" => "2",
         "score" => "4.5",
         "main_img" => "https://upload.wikimedia.org/wikipedia/commons/c/c6/Mori_soba_of_Fuji-soba.jpg",
+        "second_img" => "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Maharana_sai_pratham.jpg/250px-Maharana_sai_pratham.jpg",
         "desc" => "Chłodzona soba podawana z sosem tsuyu i dodatkami.",
         "ingredients" => [
             "2 porcje makaronu soba",
@@ -474,6 +489,7 @@ return [
         "portions" => "2",
         "score" => "4.8",
         "main_img" => "https://upload.wikimedia.org/wikipedia/commons/3/32/Sukiyaki_01.jpg",
+        "second_img" => "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Maharana_sai_pratham.jpg/250px-Maharana_sai_pratham.jpg",
         "desc" => "Gulasz z cienko krojonej wołowiny i warzyw w słodko-słonym sosie.",
         "ingredients" => [
             "200 g cienko krojonej wołowiny",
@@ -509,6 +525,7 @@ return [
         "portions" => "4",
         "score" => "4.6",
         "main_img" => "https://upload.wikimedia.org/wikipedia/commons/5/57/Mitarashi_dango_by_denver935.jpg",
+        "second_img" => "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Maharana_sai_pratham.jpg/250px-Maharana_sai_pratham.jpg",
         "desc" => "Kolorowe kulki z mąki ryżowej na patyku z sosem mitarashi.",
         "ingredients" => [
             "1 szklanka mąki ryżowej",
@@ -540,6 +557,7 @@ return [
         "portions" => "6",
         "score" => "4.5",
         "main_img" => "https://upload.wikimedia.org/wikipedia/commons/8/87/Nikuman.jpg",
+        "second_img" => "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Maharana_sai_pratham.jpg/250px-Maharana_sai_pratham.jpg",
         "desc" => "Bułeczki bao z mięsnym nadzieniem gotowane na parze.",
         "ingredients" => [
             "2 szklanki mąki pszennej",
@@ -573,6 +591,7 @@ return [
         "portions" => "2",
         "score" => "4.8",
         "main_img" => "https://upload.wikimedia.org/wikipedia/commons/e/e6/Chicken_karaage_003.jpg",
+        "second_img" => "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Maharana_sai_pratham.jpg/250px-Maharana_sai_pratham.jpg",
         "desc" => "Japońskie kawałki kurczaka w chrupiącej panierce.",
         "ingredients" => [
             "300 g kawałków kurczaka z udźca",
@@ -600,6 +619,7 @@ return [
         "portions" => "2",
         "score" => "4.7",
         "main_img" => "https://upload.wikimedia.org/wikipedia/commons/0/06/%E9%B3%A5%E7%84%BC%E3%81%8D%E5%B1%85%E9%85%92%E5%B1%8B_%2839394233682%29.jpg",
+        "second_img" => "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Maharana_sai_pratham.jpg/250px-Maharana_sai_pratham.jpg",
         "desc" => "Słodko-słony japoński omlet zwijany warstwami.",
         "ingredients" => [
             "4 jajka",
@@ -624,6 +644,7 @@ return [
         "portions" => "2",
         "score" => "4.6",
         "main_img" => "https://upload.wikimedia.org/wikipedia/commons/4/45/Gyuu-don_001.jpg",
+        "second_img" => "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Maharana_sai_pratham.jpg/250px-Maharana_sai_pratham.jpg",
         "desc" => "Miseczka ryżu z cienko krojoną wołowiną i cebulą w sosie dashi.",
         "ingredients" => [
             "200 g cienko krojonej wołowiny",

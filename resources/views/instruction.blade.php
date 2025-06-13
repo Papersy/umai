@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="{{ prepStyle('/style.css') }}">
     <title>Anmitsu Recipe - Umai Anime Recipe Collection</title>
 </head>
 <body>
@@ -13,10 +13,13 @@
             <a href="{{ route('index') }}">Strona Główna</a>
             <a href="{{ route('recipe') }}">Przepisy</a>
             <a href="{{route('favorites')}}">Ulubione</a>
+            <a href="{{route('bibliografia')}}"">Bibliografia</a>
         </div>
         <div class="search-bar">
-            <input type="text" placeholder="Search..." />
-            <button class="search-button">🔍</button>
+            <form action="{{ route('recipe') }}" method="GET" style="display: flex;">
+                <input type="text" name="search" placeholder="Search..." />
+                <button type="submit" class="search-button">🔍</button>
+            </form>
         </div>
     </nav>
 
@@ -30,8 +33,13 @@
             </div>
         </div>
 
-        <div class="recipe-image">
-            <img src="{{ $recipe['main_img'] }}" alt="Anmitsu" />
+        <div class="slider-container">
+            <button class="slider-arrow prev">❮</button>
+            <div class="slider">
+                <img src="{{ $recipe['main_img'] }}" alt="Pancakes with berries" class="slide active">
+                <img src="{{ $recipe['second_img'] }}" alt="Colorful macarons" class="slide">
+            </div>
+            <button class="slider-arrow next">❯</button>
         </div>
 
         <div class="recipe-description">
@@ -64,9 +72,9 @@
         <div class="recipe-tips">
             <h2>Wskazówki</h2>
             <ul>
-                <li>Galaretkę najlepiej przygotować dzień wcześniej</li>
-                <li>Można zastąpić owoce sezonowymi zamiennikami</li>
-                <li>Syrop mitsu można zastąpić miodem</li>
+                @foreach ($recipe->tips as $tip)
+                    <li>{{$tip}}</li>
+                @endforeach
             </ul>
         </div>
     </div>
@@ -81,20 +89,35 @@
                 </div>
             </div>
             <div class="social-links">
-                <a href="#" title="Facebook" >
-                    <img src="/facebook.png" style="width:30px;height:30px;" />
-                </a>
-                <a href="#" title="Email">
-                    <img src="/mail.png" style="width:32px;height:32px;" />
-                </a>
-                <a href="#" title="Instagram">
-                    <img src="/instagram.png" style="width:26px;height:26px;" />
-                </a>
-                <a href="#" title="Telegram">
-                    <img src="/telegram.png" style="width:25px;height:25px;" />
-                </a>
+		<a href="https://www.facebook.com/profile.php?id=100056639597769" title="Facebook">📘</a>
+                <a href="mailto:katagolubova46@gmail.com" title="Email">📧</a>
+                <a href="https://www.instagram.com/_myniceeng__" title="Instagram">📸</a>
+                <a href="https://t.me/kittykott" title="Telegram">📬</a>
             </div>
         </div>
     </footer>
+
+<script>
+        const slides = document.querySelectorAll('.slide');
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentSlide = currentSlide === 0 ? slides.length - 1 : currentSlide - 1;
+            showSlide(currentSlide);
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentSlide = currentSlide === slides.length - 1 ? 0 : currentSlide + 1;
+            showSlide(currentSlide);
+        });
+    </script>
+
 </body>
 </html>
